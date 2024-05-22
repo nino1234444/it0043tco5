@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMa617JTz7HYi_JDg5ssdNukSKt93gpRuDslru-7iXC_xEe5ixrYW4YPhHOwlDwamH1-0&usqp=CAU");
+    background-color: #0e0d0a;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px;
+    justify-content: center;
+}
+
+
+.card {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+}
+
+.card-header {
+    padding: 20px;
+}
+
+.card-header img {
+    width: 100%;
+    height: 100px;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-body h2 {
+    margin: 0;
+}
+
+.card-body p {
+    margin: 10px 0;
+}
+
+.type {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 5px;
+}
+
+.type.grass {
+    background-color: #05ff0d;
+}
+
+.type.poison {
+    background-color: #570180;
+}
+
+.type.fire {
+    background-color: #fa3a00;
+}
+
+.type.water {
+    background-color: #2125f3;
+}
+.type.normal{
+    background-color: #000000;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.add {
+    background-color: #f32121;
+    color: white;
+}
+
+button.release {
+    background-color: #3652f4;
+    color: white;
+}
