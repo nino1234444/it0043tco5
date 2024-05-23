@@ -1,6 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+box-sizing:border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMa617JTz7HYi_JDg5ssdNukSKt93gpRuDslru-7iXC_xEe5ixrYW4YPhHOwlDwamH1-0&usqp=CAU");
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/379/892/940/pokemon-underwater-underwater-anime-pokemon-hd-art-wallpaper-preview.jpg");
     background-color: #0e0d0a;
     display: grid;
     justify-content: center;
@@ -9,43 +15,57 @@ body {
     margin: 0;
 }
 
+
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 25px;
+    gap: 50px;
     justify-content: center;
+    margin: 0 auto;
 }
+
+
 
 
 .card {
-    width: 250px;
+    width: 300px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 10px 10px 10px black;
     overflow: hidden;
-    background-color: white;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80ff523f-ff84-457d-a547-464588d3a3d3/denyxek-e3205bd3-ce6c-4134-bf04-445592a06071.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgwZmY1MjNmLWZmODQtNDU3ZC1hNTQ3LTQ2NDU4OGQzYTNkM1wvZGVueXhlay1lMzIwNWJkMy1jZTZjLTQxMzQtYmYwNC00NDU1OTJhMDYwNzEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.XcdkrCNQAHJSc-_k556-MhGAZX_Qos3_ir9hRAVTnNg") ;
+    background-position: center;
+    background-size: 500%;
+    background-color: rgb(255, 255, 255);
     text-align: center;
+    padding: 10px;
 }
+
 
 .card-header {
     padding: 20px;
 }
 
+
 .card-header img {
     width: 100%;
-    height: 100px;
+    height: 150px;
 }
+
 
 .card-body {
     padding: 30px;
 }
 
+
 .card-body h2 {
     margin: 0;
 }
 
+
 .card-body p {
     margin: 10px 0;
 }
+
 
 .type {
     display: inline-block;
@@ -55,31 +75,27 @@ body {
     margin-right: 5px;
 }
 
+
 .type.grass {
     background-color: #05ff0d;
 }
+
 
 .type.poison {
     background-color: #570180;
 }
 
+
 .type.fire {
     background-color: #fa3a00;
 }
+
 
 .type.water {
     background-color: #2125f3;
 }
 .type.normal{
     background-color: #000000;
-}
-
-button {
-    padding: 10px 15px;
-    margin: 10px 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 button.add {
