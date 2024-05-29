@@ -13,7 +13,7 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-  background-image: url("pokeball3.png");
+  background-image: url("https://static.wikia.nocookie.net/pokemon-fano/images/6/6f/Poke_Ball.png/revision/latest/scale-to-width-down/767?cb=20140520015336");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -55,7 +55,7 @@
 }
 #pokemon1 {
 
-    background-color:bisque ;
+    background-color:rgb(255, 196, 237) ;
 
 }
 #pokemon2 {
@@ -105,7 +105,7 @@
 }
 #pokemon11 {
   
-    background-color:darkblue ;
+    background-color:blue ;
 
 }
 #pokemon12 {
