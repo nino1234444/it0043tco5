@@ -11,7 +11,6 @@
 
 body {
     background-color: black;
-    
 }
 
 .container {
@@ -22,10 +21,9 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
-    background-image: url(http://getwallpapers.com/wallpaper/full/0/5/5/90535.jpg);
+    background-image: url('http://getwallpapers.com/wallpaper/full/0/5/5/90535.jpg');
     background-size: cover;
     background-position: center;
-   
 }
 
 .box img {
@@ -43,8 +41,8 @@ body {
     align-items: center;
     gap: 20px;
     justify-content: space-between;
+    position: relative;
 }
-
 
 .pokeball {
     display: none;
@@ -60,26 +58,17 @@ body {
 
 .box .name {
     display: none;
-    
 }
-
 
 .box .type1, .box .type2 {
-  display: none;
-  text-align: center;
-  font-size: 1.5rem;
-  width: 100%;
-  color: white;
-  text-shadow: 2px 2px 3px black;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.box:hover .name,
-.box:hover .type1,
-.box:hover .type2,
-.box:hover .pokeball {
-  display: block;
+    display: none;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .charmander {
@@ -93,23 +82,22 @@ body {
 .bellsprout {
     background-color: indigo;
 }
-.squirtle{
-    background-color:skyblue;
+
+.squirtle {
+    background-color: skyblue;
 }
 
 .pikachu {
     background-color: #FFF800;
 }
 
-.bullbasaur {
+.bulbasaur {
     background-color: #47C67B;
 }
 
-
-.zubat{
+.zubat {
     background-color: #C4833D;
 }
-
 
 .meowth {
     background-color: #EAE4C5;
@@ -131,50 +119,43 @@ body {
     background-color: #0D5C9E;
 }
 
-.grass{
+.grass {
     background-color: #3FA129;
 }
-.fairy{
-  background-color: beige;
-}
 
-.poison{
+.poison {
     background-color: #9141CB;
 }
 
-.bug{
+.bug {
     background-color: #91A119;
 }
 
-.fire{
+.fire {
     background-color: #E52829;
 }
-.psychic{
-  background-color: purple;
-}
 
-.dragon{
+.dragon {
     background-color: #5060E1;
 }
 
-.normal{
+.normal {
     background-color: #9FA19F;
 }
 
-.fighting{
+.fighting {
     background-color: #FF8001;
 }
 
-.flying{
+.flying {
     background-color: #81B9EF;
 }
 
-.electric{
+.electric {
     background-color: #FAC001;
-
 }
 
-.water{
+.water {
     background-color: #2980EF;
 }
 
@@ -197,7 +178,7 @@ body {
         display: block;
     }
 
-    .type1, .type2{
+    .type1, .type2 {
         display: none;
     }
 
@@ -214,14 +195,20 @@ body {
     }
 
     .box:hover {
-
         background-image: url("https://media.giphy.com/media/tecJUiOAZ5rc4/giphy.gif");
         background-size: cover;
         background-position: center;
     }
+
+    .box:hover .name,
+    .box:hover .type1,
+    .box:hover .type2,
+    .box:hover .pokeball {
+        display: block;
+    }
 }
 
-@media (max-width: 5000px) {
+@media (max-width: 700px) {
     .pokeball img {
         display: none;
     }
@@ -241,38 +228,15 @@ body {
     }
 
     .box:hover {
-
         background-image: url("https://www.pngitem.com/pimgs/m/107-1075267_open-pokeball-png-pokemon-ball-open-png-transparent.png");
         background-size: cover;
-        background-position: center;   
-      }
+        background-position: center;
+    }
 
-      @media (max-width: 700px) {
-        .pokeball img {
-            display: none;
-        }
-    
-        .box {
-            flex-direction: column;
-            justify-content: center;
-            gap: 10px;
-        }
-    
-        .box img {
-            width: 256px;
-        }
-    
-        .box .name {
-            font-size: 2.5rem;
-        }
-    
-        .box:hover {
-    
-            background-image: url("https://www.pngitem.com/pimgs/m/107-1075267_open-pokeball-png-pokemon-ball-open-png-transparent.png");
-            background-size: cover;
-            background-position: center;   
-          }
-      }
-  
-
+    .box:hover .name,
+    .box:hover .type1,
+    .box:hover .type2,
+    .box:hover .pokeball {
+        display: block;
+    }
 }
