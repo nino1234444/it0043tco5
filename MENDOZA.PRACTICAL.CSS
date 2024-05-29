@@ -1,1 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
 
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-image:url("https://i.pinimg.com/originals/c7/d4/20/c7d4203099d15ea65bd622c4f1f72edc.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 1200px;
+    padding: 15px;
+
+    border: 3px solid black;
+}
+
+
+@media (max-aspect-ratio: 3/4) {
+    .pokemon-item {
+        flex: 1 0 33.33%;
+    }
+}
+
+
+@media (max-width: 1090px) {
+    .container {
+        flex-grow: 1;
+        height: auto;
+    }
+
+}
+#pokemon1 {
+
+    background-color:bisque ;
+
+}
+#pokemon2 {
+
+    background-color:yellowgreen;
+
+}
+#pokemon3 {
+
+    background-color:blueviolet ;
+
+}
+#pokemon4 {
+  
+    background-color: yellow;
+
+}
+#pokemon5 {
+
+    background-color: gold;
+
+}
+#pokemon6 {
+
+    background-color: blue;
+
+}
+#pokemon7 {
+
+    background-color: violet;
+
+}
+#pokemon8 {
+ 
+    background-color: peachpuff;
+
+}
+#pokemon9 {
+
+    background-color:green ;
+
+}
+#pokemon10 {
+ 
+    background-color: darkgoldenrod;
+
+}
+#pokemon11 {
+  
+    background-color:darkblue ;
+
+}
+#pokemon12 {
+ 
+    background-color: purple;
+
+}
