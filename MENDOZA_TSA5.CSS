@@ -1,0 +1,172 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.wc-container{
+    width: 85vw;
+    margin: 20px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    border: 10px solid;
+}
+
+.item{
+    border: 5px solid #000000;
+    padding: 10px;
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#luffy.details{
+    flex-direction: row;
+}
+
+.name{
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 5px;
+}
+.img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover; 
+}
+
+
+.descr{
+    font-size: 10px;
+    font-family: sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+#luffy{
+    background-color: #ff5b6b;
+    color: black;
+    grid-column: 1 / span 2 ;
+    grid-row: 1;
+}
+
+#roger{
+    background-color: red;
+    color:black;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#sanji{
+    background-color: orange;
+    color: black;
+    grid-column: 4;
+    grid-row: 1 / span 2;
+}
+
+#shanks{
+    background-color: darkred;
+    color: black;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#zoro{
+    background-color: darkgreen;
+    color: black;
+    grid-column: 2 / span 2;
+    grid-row: 2;
+}
+
+@media(max-width:1200px){
+    .wc-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    #luffy{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+    #roger{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    
+    #sanji{
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    
+    #shanks{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    #zoro{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    #shanks .details{
+        flex-direction: row;
+    }
+
+    #luffy .details,
+    #shanks .details{
+        flex-direction: column;
+    }
+
+}
+@media(max-width: 800px){
+    .wc-container{
+        grid-template-columns: 1fr;
+    }
+   
+    #luffy{
+        grid-column: 1;
+        grid-row: 1;
+        align-items: center;
+    }
+    
+    #roger{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    #sanji{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    #shanks{
+        grid-column: 1;
+        grid-row: 4;
+    }
+    
+    #zoro{
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    #luffy .details,
+    #roger .details,
+    #sanji .details,
+    #shanks .details,
+    #zoro .details{
+        flex-direction: row;
+    }
+}
