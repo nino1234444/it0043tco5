@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const flexContainer = document.querySelector('.container-2');
     const gapInput = document.getElementById('gap');
-    const flexItems = []; 
-    let boxCount = 0; 
+    const flexGrowInput = document.getElementById('grow');
+    let boxCount = 3; // Start with 3 boxes initially
+    const flexItems = [];
 
     document.getElementById('reset-flexbox').addEventListener('click', () => {
         flexContainer.style.flexDirection = 'row';
@@ -31,23 +32,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     gapInput.addEventListener('input', (e) => {
-        flexContainer.style.gap = `${e.target.value}px`;
+        const gapValue = Math.max(0, parseInt(e.target.value));
+        flexContainer.style.gap = `${gapValue}px`;
+        e.target.value = gapValue;
     });
 
     document.getElementById('reset-grow').addEventListener('click', resetGrow);
 
     document.getElementById('grow-all').addEventListener('click', () => {
-        flexItems.forEach(item => item.style.flexGrow = '1');
+        flexItems.forEach(item => item.style.flex = `1`);
     });
 
     document.getElementById('add-box').addEventListener('click', addBox);
 
     document.getElementById('remove-box').addEventListener('click', removeBox);
 
-    document.getElementById('reset-boxes').addEventListener('click', resetBoxes); // Added reset boxes functionality
+    document.getElementById('reset-boxes').addEventListener('click', resetBoxes);
 
     function resetGrow() {
-        flexItems.forEach(item => item.style.flexGrow = '0');
+        flexItems.forEach(item => {
+            item.style.flex = `0 1 auto`;
+        });
     }
 
     function addBox() {
@@ -55,9 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const newBox = document.createElement('h1');
         newBox.classList.add('box');
         newBox.textContent = boxCount;
+        newBox.style.flex = `0 1 ${flexGrowInput.value || 'auto'}`;
         flexItems.push(newBox);
         flexContainer.appendChild(newBox);
         newBox.style.backgroundColor = getRandomColor();
+
+        // Update event listener for each box's flex-grow adjustment
+        newBox.addEventListener('input', () => {
+            newBox.style.flex = `0 1 ${newBox.value || 'auto'}`;
+        });
     }
 
     function removeBox() {
@@ -66,20 +77,19 @@ document.addEventListener('DOMContentLoaded', () => {
             flexContainer.removeChild(removedBox);
             boxCount--;
         }
-
     }
 
     function resetBoxes() {
         flexItems.forEach(item => flexContainer.removeChild(item));
         flexItems.length = 0;
-        boxCount = 0;
+        boxCount = 3; // Reset box count to start from 3 (existing boxes)
     }
 
     function resetGap() {
         gapInput.value = '0';
         flexContainer.style.gap = '0px';
     }
-    
+
     function getRandomColor() {
         const letters = '0123456789ABCDEF';
         let color = '#';
@@ -87,12 +97,5 @@ document.addEventListener('DOMContentLoaded', () => {
             color += letters[Math.floor(Math.random() * 16)];
         }
         return color;
-    }
-    
-        function resetGrow() {
-        document.getElementById('box1').value = 0;
-        document.getElementById('box2').value = 0;
-        document.getElementById('box3').value = 0;
-        flexItems.forEach(item => item.style.flexGrow = '0');
     }
 });
