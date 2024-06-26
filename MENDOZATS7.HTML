@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-1">
+        <button id="reset-flexbox" class="btn btn-1">Reset Flexbox</button>
+        <input type="number" class="gapin" id="gap">
+        <button class="btn btn-2" onclick="gap()">Gap</button>
+        <h3 class="flexdir">Flex Direction</h3>
+        <button class="btn btn-3" data-flex-direction="row">Row</button>
+        <button class="btn btn-4" data-flex-direction="column">Column</button>
+        <h3 class="justcont">Justify Content</h3>
+        <button class="btn btn-5" data-justify-content="flex-start">Start</button>
+        <button class="btn btn-6" data-justify-content="center">Center</button>
+        <button class="btn btn-7" data-justify-content="flex-end">End</button>
+        <button class="btn btn-8" data-justify-content="space-between">Space Between</button>
+        <button class="btn btn-9" data-justify-content="space-around">Space Around</button>
+        <button class="btn btn-10" data-justify-content="space-evenly">Space Evenly</button>
+        <h3 class="aliitm">Align Items</h3>
+        <button class="btn btn-11" data-align-items="flex-start">Start</button>
+        <button class="btn btn-12" data-align-items="center">Center</button>
+        <button class="btn btn-13" data-align-items="flex-end">End</button>
+        <h3 class="flexgrw">Flex Grow</h3>
+        <button id="reset-grow" class="btn btn-14">Reset</button>
+        <button id="grow-all" class="btn btn-15">Grow All</button>
+        <h3 class="ddbx">box</h3>
+        <button id="add-box" class="btn btn-16">add box</button>
+        <button id="remove-box" class="btn btn-17">remove box</button>
+        <button id="reset-box" class="btn btn-18"> reset box"<
+    </div>
+
+    <div class="container-2">
+        <h1 class="box box-1">1</h1>
+        <h1 class="box box-2">2</h1>
+        <h1 class="box box-3">3</h1>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>
