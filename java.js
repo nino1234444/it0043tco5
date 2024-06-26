@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const flexContainer = document.querySelector('.container-2');
     const gapInput = document.getElementById('gap');
     const flexGrowInput = document.getElementById('grow');
-    let boxCount = 3; // Start with 3 boxes initially
+    let boxCount = 0; 
     const flexItems = [];
 
     document.getElementById('reset-flexbox').addEventListener('click', () => {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetBoxes() {
         flexItems.forEach(item => flexContainer.removeChild(item));
         flexItems.length = 0;
-        boxCount = 3; // Reset box count to start from 3 (existing boxes)
+        boxCount = 0; 
     }
 
     function resetGap() {
