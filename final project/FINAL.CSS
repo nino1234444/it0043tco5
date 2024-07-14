@@ -91,7 +91,6 @@ header nav ul li a:hover {
     background-color: #c0392b;
 }
 
-/* About Section */
 .about {
     background-image: url(aboutmmme.png);
     padding: 300px 0;
@@ -134,7 +133,7 @@ header nav ul li a:hover {
 
 .services .services-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     justify-content: space-around;
     margin-top: 40px;
@@ -311,7 +310,6 @@ header nav ul li a:hover {
     background-color: #555;
 }
 
-/* Footer Section */
 footer {
     background-color: #333;
     color: #fff;
@@ -323,10 +321,9 @@ footer p {
     font-size: 1.1em;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
     .services .services-list {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr; 
     }
 
     .portfolio .portfolio-items {
@@ -335,11 +332,15 @@ footer p {
 
     .hero {
         padding: 200px 0;
+        background-size: 75%; 
+        background-position: left; 
     }
 
     .about {
         padding: 150px 0;
     }
+
+
 }
 
 @media (max-width: 480px) {
@@ -370,5 +371,14 @@ footer p {
 
     .contact h2 {
         font-size: 2em;
+    }
+
+    .hero {
+        padding: 150px 0;
+        background-position: center;
+    }
+
+    header {
+        display: none; 
     }
 }
